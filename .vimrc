@@ -1,5 +1,3 @@
-" VIMRC
-
 " LEADER
 let mapleader = ","
 
