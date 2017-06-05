@@ -2,7 +2,7 @@
 let mapleader = ","
 
 " COLOR
-colorscheme evening
+colorscheme morning
 :syntax on
 
 " LINES
