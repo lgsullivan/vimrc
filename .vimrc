@@ -2,15 +2,30 @@
 let mapleader = ","
 
 " COLOR
-colorscheme morning
-:syntax on
+colorscheme elflord
+
+if has("syntax")
+  syntax on
+endif
 
 " LINES
 set number
-set relativenumber
+"set relativenumber
 
 " HIGHLIGHT SEARCH
 set hlsearch
+
+" AUTO CONFIG 
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
+if has("autocmd")
+  filetype plugin indent on
+endif
+
+set showmatch
+set incsearch
 
 " MY MAPPINGS
 inoremap jk <ESC>
